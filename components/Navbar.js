@@ -16,25 +16,25 @@ const Navbar = () => {
 
     return (
         <>
-            <div className={`w-full h-40 flex justify-center items-end ${poppinsBold.className}`}>
+            <div className='w-full h-40 flex justify-center items-end fixed' >
                 <div  onMouseLeave={()=>{setshowdropdown(false)}}  className='bg-[#ffffff] w-[90%] h-24 mx-auto rounded-full flex justify-between items-center'>
-                    <div className="rightdiv flex items-center  gap-16 pl-9">
+                    <div className={`rightdiv flex items-center  gap-16 pl-9 ${poppinsBold.className}`}>
                         <div className="logo">
                             <Image src={"/linktree.svg"} width={130} height={130} alt='LinkTree' />
                         </div>
                         <div className="others flex items-center relative">
                             <ul className='flex gap-3 text-lg items-center'>
-                                <Link href=""><li className='hover:bg-[#e9e9e9] px-4 py-3 rounded-xl'>Templates</li></Link>
-                                <Link href=""><li onMouseOver={()=>{setshowdropdown(false)}} className='hover:bg-[#e9e9e9] px-4 py-3 rounded-xl'>Marketplace</li></Link>
-                                <Link href=""><li onMouseOver={()=>{setshowdropdown(true)}} className='hover:bg-[#e9e9e9] px-4 py-3 rounded-xl relative'>Discover</li></Link>
-                                <Link href=""><li onMouseOver={()=>{setshowdropdown(false)}} className='hover:bg-[#e9e9e9] px-4 py-3 rounded-xl'>Pricing</li></Link>
-                                <Link href=""><li className='hover:bg-[#e9e9e9] px-4 py-3 rounded-xl'>Learn</li></Link>
+                                <Link href=""><li className='hover:bg-[#e9e9e9] px-4 py-3 rounded-xl text-[#676b5f]'>Templates</li></Link>
+                                <Link href=""><li onMouseOver={()=>{setshowdropdown(false)}} className='hover:bg-[#e9e9e9] text-[#676b5f] px-4 py-3 rounded-xl'>Marketplace</li></Link>
+                                <Link href=""><li onMouseOver={()=>{setshowdropdown(true)}} className='hover:bg-[#e9e9e9] text-[#676b5f] px-4 py-3 rounded-xl relative'>Discover</li></Link>
+                                <Link href=""><li onMouseOver={()=>{setshowdropdown(false)}} className='hover:bg-[#e9e9e9] text-[#676b5f] px-4 py-3 rounded-xl'>Pricing</li></Link>
+                                <Link href=""><li className='hover:bg-[#e9e9e9] text-[#676b5f] px-4 py-3 rounded-xl'>Learn</li></Link>
                             </ul>
                             <ul  onMouseOver={()=>{setshowdropdown(true)}} className={`${showdropdown ? "" : "hidden"} absolute top-[9.2vh] left-[15vw] flex flex-col justify-start gap-3 w-72 bg-[#ffffff] rounded-xl px-6 py-6`}>
-                                <Link href=""><li className='hover:bg-[#e9e9e9] px-4 py-3 rounded-xl'>LinkTree for Instagram</li></Link>
-                                <Link href=""><li className='hover:bg-[#e9e9e9] px-4 py-3 rounded-xl'>LinkTree for Tik Tok</li></Link>
-                                <Link href=""><li className='hover:bg-[#e9e9e9] px-4 py-3 rounded-xl'>LinkTree for Facebook</li></Link>
-                                <Link href=""><li className='hover:bg-[#e9e9e9] px-4 py-3 rounded-xl'>LinkTree for Twitter</li></Link>
+                                <Link href=""><li className='hover:bg-[#e9e9e9] text-[#676b5f] px-4 py-3 rounded-xl'>LinkTree for Instagram</li></Link>
+                                <Link href=""><li className='hover:bg-[#e9e9e9] text-[#676b5f] px-4 py-3 rounded-xl'>LinkTree for Tik Tok</li></Link>
+                                <Link href=""><li className='hover:bg-[#e9e9e9] text-[#676b5f] px-4 py-3 rounded-xl'>LinkTree for Facebook</li></Link>
+                                <Link href=""><li className='hover:bg-[#e9e9e9] text-[#676b5f] px-4 py-3 rounded-xl'>LinkTree for Twitter</li></Link>
                             </ul>
                         </div>
                     </div>
