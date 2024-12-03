@@ -28,17 +28,17 @@ export default function Home() {
             <div className="inputbtn flex gap-3 w-full items-start relative">
               <div className="InputSection flex text-xl font-medium text-[#7b6b5f]">
                 <label htmlFor="inputName" className="z-10 absolute left-4 top-[30%]">linktr.ee/</label>
-              <p className="inputBox">
-                <input id="inputName" name="inputName" type="text" value={Name} onChange={(e) => { handleChange(e) }} placeholder="yourname" className=" pl-24 py-5 rounded-2xl placeholder: placeholder:text-xl placeholder:font-medium" />
-              </p></div>
+                <p className="inputBox">
+                  <input id="inputName" name="inputName" type="text" value={Name} onChange={(e) => { handleChange(e) }} placeholder="yourname" className=" pl-24 py-5 rounded-2xl placeholder: placeholder:text-xl placeholder:font-medium" />
+                </p></div>
               <div className="btns flex items-center justify-center absolute right-[20%] ">
                 <button className={`bg-[#e9c0e9] px-8  py-5 rounded-full font-medium text-xl`}>Claim for LinkTree</button>
               </div>
             </div>
           </div>
-
-          <div className="ml-[6vw]">
-
+ 
+          <div className="ml-[6vw] pt-44">
+            <Image src={"/picture_1.png"} width={600} height={600} alt="Picture"/>
           </div>
         </section>
         <section className="bg-green-600 min-h-[100vh]">
