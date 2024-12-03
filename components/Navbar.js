@@ -16,7 +16,7 @@ const Navbar = () => {
 
     return (
         <>
-            <div className='w-full h-40 flex justify-center items-end fixed' >
+            <div className='w-full h-40 flex justify-center items-end fixed z-20' >
                 <div  onMouseLeave={()=>{setshowdropdown(false)}}  className='bg-[#ffffff] w-[90%] h-24 mx-auto rounded-full flex justify-between items-center'>
                     <div className={`rightdiv flex items-center  gap-16 pl-9 ${poppinsBold.className}`}>
                         <div className="logo">
