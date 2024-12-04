@@ -5,7 +5,7 @@ const Generate = () => {
   return (
     <div className='h-full grid grid-cols-2 bg-[#225abf]'>
       <div className="col1 flex flex-col gap-20 justify-center items-center">
-        <h1 className='font-bold text-5xl text-white'>Create Your BitTree</h1>
+        <h1 className='font-bold text-5xl text-white'>Create Your BitLink</h1>
         <div className='flex flex-col gap-9'>
           <div className="items">
             <h1 className='font-semibold text-2xl text-white'>Step 1: Claim Your Handle</h1>
@@ -19,13 +19,15 @@ const Generate = () => {
             <div className="mx-4 flex flex-col gap-6 mt-6">
               <input className='px-24 py-6 rounded-xl focus:outline-pink-600' type="text" placeholder='Enter link text' />
               <input className='px-24 py-6 rounded-xl focus:outline-pink-600' type="text" placeholder='Enter link' />
+              <button className='px-6 py-3 hover:bg-[#ffffff] rounded-xl font-medium text-lg bg-slate-200'>Add Link</button>
             </div>
           </div>
 
           <div className="items">
             <h1 className='font-semibold text-2xl text-white'>Step 3: Add a Picture and Finalize</h1>
-            <div className="mx-4 mt-6">
-              <input className='px-24 py-6 rounded-xl focus:outline-pink-600' type="text" placeholder='Add picture' />
+            <div className="mx-4 flex flex-col gap-6 mt-6">
+              <input className='px-24 py-6 rounded-xl focus:outline-pink-600' type="text" placeholder='Add picture link' />
+              <button className='px-6 py-3 hover:bg-[#ffffff] rounded-xl font-medium text-lg bg-slate-200'>Create Your BitLink</button>
             </div>
           </div>
         </div>

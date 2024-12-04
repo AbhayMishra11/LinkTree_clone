@@ -29,12 +29,12 @@ export default function Home() {
 
             <div className="inputbtn flex gap-3 w-full items-start relative">
               <div className="InputSection flex text-xl font-medium text-[#7b6b5f]">
-                <label htmlFor="inputName" className="z-10 absolute left-4 top-[30%]">Bittr.ee/</label>
+                <label htmlFor="inputName" className="z-10 absolute left-4 top-[30%]">BitLi.nk/</label>
                 <p className="inputBox">
                   <input id="inputName" name="inputName" type="text" value={Name} onChange={(e) => { handleChange(e) }} placeholder="yourname" className=" pl-24 py-5 rounded-xl focus:outline-green-700 placeholder:text-xl placeholder:font-medium" />
                 </p></div>
               <div className="btns flex items-center justify-center absolute right-[20%] ">
-                <button className={`bg-[#e9c0e9] px-8  py-5 rounded-full font-medium text-xl`}>Claim for BitTree</button>
+                <button className={`bg-[#e9c0e9] px-8  py-5 rounded-full font-medium text-xl`}>Claim for BitLink</button>
               </div>
             </div>
           </div>
