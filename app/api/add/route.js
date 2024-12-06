@@ -16,7 +16,7 @@ export async function POST(request) {
 
   const result = await collection.insertOne({
     handle: body.handle,
-    link: body.link,
+    links: body.links,
    picture:body.picture
   })
   return Response.json({ success: true, error: false, message: 'Data Added successfully', result:result })

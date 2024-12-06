@@ -2,6 +2,8 @@
 import Image from "next/image";
 import localFont from "next/font/local";
 import Navbar from "@/components/Navbar";
+import Link from "next/link";
+import { useRouter } from "next/navigation";
 import { useState } from "react";
 
 const poppinsBold = localFont({
@@ -13,10 +15,16 @@ const poppinsBold = localFont({
 export default function Home() {
 
   const [Name, setName] = useState("")
+  const router=useRouter()
 
   const handleChange = (e) => {
     setName(e.target.value)
   }
+
+  const handleClick=()=>{
+    router.push(`/generate?handle=${Name}`)
+  }
+
 
   return (
     <>
@@ -34,7 +42,7 @@ export default function Home() {
                   <input id="inputName" name="inputName" type="text" value={Name} onChange={(e) => { handleChange(e) }} placeholder="yourname" className=" pl-24 py-5 rounded-xl focus:outline-green-700 placeholder:text-xl placeholder:font-medium" />
                 </p></div>
               <div className="btns flex items-center justify-center absolute right-[20%] ">
-                <button className={`bg-[#e9c0e9] px-8  py-5 rounded-full font-medium text-xl`}>Claim for BitTree</button>
+              <button onClick={()=>handleClick()} disabled={Name.length<5} className={`bg-[#e9c0e9] px-8 disabled:bg-slate-500 py-5 rounded-full font-medium text-xl`}>Claim for BitTree</button>
               </div>
             </div>
           </div>

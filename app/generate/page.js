@@ -6,11 +6,14 @@ import Image from 'next/image';
 import { Bounce } from 'react-toastify';
 import Link from 'next/link';
 import 'react-toastify/dist/ReactToastify.css';
+import { useSearchParams } from 'next/navigation'
 
 const Generate = () => {
 
+  const searchParams=useSearchParams()
+
   const [links, setLinks] = useState([{ link: "", linktext: "" }])
-  const [handle, sethandle] = useState("")
+  const [handle, sethandle] = useState(searchParams.get('handle'))
   const [picture, setpicture] = useState("")
 
   const handleChange = (index, link, linktext) => {
@@ -38,7 +41,7 @@ const Generate = () => {
     const raw = JSON.stringify({
       "handle": handle,
       "picture": picture,
-      "link": link
+      "links": link
     });
 
     const requestOptions = {
@@ -116,8 +119,8 @@ const Generate = () => {
               <div className="arrItems flex flex-col gap-6 mt-6 justify-center items-center">
                 {links && links.map((items, index) => {
                   return <div key={index} className="mx-4 flex gap-3">
-                    <input value={items.link || ""} onChange={(e) => { handleChange(index, e.target.value, items.linktext) }} className='px-24 py-6 rounded-xl focus:outline-pink-600' type="text" placeholder='Enter link ' />
                     <input value={items.linktext || ""} onChange={(e) => { handleChange(index, items.link, e.target.value) }} className='px-24 py-6 rounded-xl focus:outline-pink-600' type="text" placeholder='Enter link text' />
+                    <input value={items.link || ""} onChange={(e) => { handleChange(index, e.target.value, items.linktext) }} className='px-24 py-6 rounded-xl focus:outline-pink-600' type="text" placeholder='Enter link ' />
                   </div>
                 })
 
@@ -129,7 +132,7 @@ const Generate = () => {
               <h1 className='font-semibold text-2xl text-white'>Step 3: Add a Picture and Finalize</h1>
               <div className="mx-4 flex gap-6 mt-6">
                 <input value={picture} onChange={(e) => setpicture(e.target.value)} className='px-24 py-6 rounded-xl focus:outline-pink-600' type="text" placeholder='Add picture link' />
-                <button disabled={picture == "" || handle.length<5 || links[0].link == "" || links[0].linktext == ""} onClick={() => CreateYourBitTree(links, handle, picture)} className='px-11 py-6 hover:bg-[#ffffff] w-fit rounded-xl font-medium text-lg bg-slate-200 disabled:bg-blue-400'>Create Your BitTree</button>
+                <Link href={`/${handle}`}><button disabled={picture == "" || handle.length<5 || links[0].link == "" || links[0].linktext == ""} onClick={() => CreateYourBitTree(links, handle, picture)} className='px-11 py-6 hover:bg-[#ffffff] w-fit rounded-xl font-medium text-lg bg-slate-200 disabled:bg-blue-400'>Create Your BitTree</button></Link>
               </div>
             </div>
           </div>
